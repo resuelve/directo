@@ -9,6 +9,6 @@ defmodule Directo.Api.Sms do
       |> Map.put("username", username)
       |> Map.put("password", password)
 
-    DirectoRequest.post!("/sendSms", params_with_auth)
+    DirectoRequest.post!("", params_with_auth)
   end
 end

@@ -10,7 +10,7 @@ by adding `directo` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:directo, "~> 0.0.2"}
+    {:directo, "~> 0.0.3"}
   ]
 end
 ```
