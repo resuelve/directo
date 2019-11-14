@@ -5,11 +5,12 @@ defmodule DirectoRequest do
 
   use HTTPoison.Base
 
-  @endpoint "http://smsapi.directo.com:8001/api"
   @default_headers [{"Content-Type", "application/json"}]
 
   def process_request_url(url) do
-    @endpoint <> url
+    :directo
+    |> Application.get_env(:host)
+    |> Kernel.<>(url)
   end
 
   def process_request_body(body) do
